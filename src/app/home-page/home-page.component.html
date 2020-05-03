@@ -1,0 +1,21 @@
+<div class="division">
+    <input [(ngModel)]="filterData" type="test" placeholder="Enter Text...">
+    <button (click)="filterFeed()">Filter</button>
+</div>
+
+<div class="row mt-5">
+    <div class="col-md-4 mb-3" *ngFor="let list of dataList">
+        <div class="card text-center">
+            <div class="card-body">
+                <div class="card-title"><h5>{{list.data.title}}</h5></div>
+                <div class="card-body">
+                    <img src="{{list.data.thumbnail}}" alt="Not Found" onerror="this.onerror=null; this.src='assets/img.png'">
+                </div>
+                <a (click)="getPostData(list.data)" class="btn btn-primary">View Post</a>
+            </div>
+            <div class="card-footer text-muted">
+                {{list.data.author}}
+            </div>
+        </div>
+    </div>
+</div>
