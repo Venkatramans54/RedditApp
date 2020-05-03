@@ -1,5 +1,5 @@
 <div class="division">
-    <input [(ngModel)]="filterData" type="test" placeholder="Enter Text...">
+    <input [(ngModel)]="filterData" (keyup.enter)="filterFeed()" type="test" placeholder="Enter Text...">
     <button (click)="filterFeed()">Filter</button>
 </div>
 
